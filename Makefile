@@ -8,12 +8,12 @@ help:
 	@echo
 	@echo "Available targets:"
 	@echo "  help: Show this help"
-	@echo "  format: Run type checking and code styling inplace"
+	@echo "  format: Run code formatting and linting"
 	@echo "  test: Run all tests"
 
 format:
-	black .
-	ruff --fix .
+	uv run black .
+	uv run ruff check --fix .
 
 test:
-	pytest -n auto
+	uv run pytest -n auto

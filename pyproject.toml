@@ -1,0 +1,16 @@
+[project]
+name = "mjctrl"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "mujoco>=3.1.0",
+    "numpy>=2.5.4",
+]
+
+[dependency-groups]
+dev = [
+    "black>=26.10.1",
+    "pytest>=9.2.0",
+    "pytest-xdist>=3.8.0",
+    "ruff>=0.17.4",
+]
